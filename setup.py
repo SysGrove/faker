@@ -34,14 +34,7 @@ setup(name='fake-factory',
       author_email='joke2k@gmail.com',
       url='http://github.com/joke2k/faker',
       license='MIT License',
-      packages=[
-      'faker',
-      'faker.providers',
-      'faker.providers.en_US',
-      'faker.providers.fr_FR',
-      'faker.providers.it_IT',
-      'faker.utils'
-      ],
+      packages=find_packages(),
       platforms=["any"],
       test_suite='faker.tests',
       )
