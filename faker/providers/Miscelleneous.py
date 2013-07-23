@@ -63,3 +63,15 @@ class Provider(BaseProvider):
     @classmethod
     def languageCode(cls):
         return cls.randomElement(cls.languageCodes)
+
+    @classmethod
+    def country_from_continent(cls, continent='Europe'):
+        """ Other values for 'continent' are
+        'Asia', 'North America', 'Africa', 'South America', 'Oceania'
+
+        """
+        coutries_by_contient = filter(
+            lambda x: x['continent'] == continent,
+            Date_Time.Provider.countries
+        )
+        return cls.randomElement(coutries_by_contient)
